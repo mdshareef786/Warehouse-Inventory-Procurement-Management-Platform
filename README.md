@@ -413,7 +413,7 @@ Goods receipt records
 Atomic database rollback
 
 Example:
-
+```
 Purchase Order
       │
       ▼
@@ -430,12 +430,14 @@ Goods Receipt
              ├── PARTIALLY_RECEIVED
              │
              └── RECEIVED
+```
+
 ### 🔄 Stock Transfer Management
 
 Stock transfers allow inventory to move between warehouses.
 
 Transfer lifecycle:
-
+```
 REQUESTED
     │
     ├────────────► REJECTED
@@ -448,7 +450,7 @@ IN_TRANSIT
     │
     ▼
  RECEIVED
-
+```
 Supported operations:
 
 Create transfer
@@ -490,7 +492,7 @@ Analytics endpoints require authentication.
 Inventory lookup operations support Redis caching.
 
 The flow is:
-
+```
 Request
    │
    ▼
@@ -508,7 +510,7 @@ Check Redis Cache
            │
            ▼
         Return
-
+```
 Inventory cache is invalidated whenever inventory changes.
 
 This reduces unnecessary database queries for frequently accessed inventory information.
@@ -531,7 +533,7 @@ Scheduler
 ### 🗄️ Database
 
 The project uses:
-
+```
 PostgreSQL
      │
      ▼
@@ -539,7 +541,7 @@ SQLAlchemy ORM
      │
      ▼
 Alembic Migrations
-
+```
 Database migrations are managed using Alembic.
 
 ### 🔄 Database Migrations
@@ -770,7 +772,7 @@ Proper logging and monitoring
 ### 🔁 Inventory Transaction Flow
 
 Every inventory movement follows a controlled service-layer process.
-
+```
 API Request
     │
     ▼
@@ -800,6 +802,7 @@ Inventory Alert Check
     │
     ▼
 Response
+```
 ### 🧱 Design Principles
 
 The application follows several backend engineering principles:
