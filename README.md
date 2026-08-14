@@ -285,7 +285,7 @@ Supported operations:
 Stock In
 
 Adds inventory to a warehouse.
-
+```
 Stock In
    │
    ├── Validate Product
@@ -295,7 +295,7 @@ Stock In
    ├── Invalidate Cache
    └── Check Inventory Alert
 Stock Out
-
+```
 Removes inventory from a warehouse while validating available stock.
 
 Reserve
@@ -357,7 +357,7 @@ Suppliers are associated with purchase orders and procurement operations.
 The Purchase Order module manages the procurement lifecycle.
 
 The purchase order lifecycle includes:
-
+```
 DRAFT
   │
   ▼
@@ -375,7 +375,7 @@ ORDERED
   │                         │
   │                         ▼
   └────────────────────► RECEIVED
-
+```
 Supported operations:
 
 Generate purchase order number
